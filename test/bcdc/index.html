@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+<script type="text/javascript" src="http://www.bcdb.com/js/jquery-1.7.2.min.js"></script>
+<script src='http://www.bcdb.com/js/jquery.MetaData.js' type="text/javascript" language="javascript"></script>
+<script src='http://local.fyneworks.com/jquery/star-rating/jquery.rating.js' type="text/javascript" language="javascript"></script>
+<link href="http://local.fyneworks.com/jquery/star-rating/jquery.rating.css" rel="stylesheet" />
+<script type="text/javascript">
+$(function(){
+	
+$('.hover-star').rating({
+focus: function(value, link){
+	console.log(1);
+var tip = $('#hover-test');
+tip[0].data = tip[0].data || tip.html();
+tip.html(link.title || 'value: '+value);
+},
+blur: function(value, link){
+	console.log(2);
+var tip = $('#hover-test');
+$('#hover-test').html(tip[0].data || '');
+}
+});
+
+});
+</script>
+</head>
+
+<body>
+
+
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Absolute Garbage- &#188; Star" value=".25" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Garbage- &#189; Star" value=".5" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Unwatchable- &#190; Star" value=".75" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Trash- 1 Star" value="1" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Very Very Poor- 1&#188; Stars" value="1.25" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Very Poor- 1&#189; Stars" value="1.5" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Pretty Poor- 1&#190; Stars" value="1.75" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Poor- 2 Stars" value="2" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Below Average- 2&#188; Stars" value="2.25" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Average- 2&#189; Stars" value="2.5" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Slightly Above Average- 2&#190; Stars" value="2.75" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Above Average- 3 Stars" value="3" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Almost Good- 3&#188; Stars" value="3.25" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Good- 3&#189; Stars" value="3.5" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Better Than Good- 3&#190; Stars" value="3.75" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Pretty Good- 4 Stars" value="4" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Pretty Darn Good- 4&#188; Stars" value="4.25" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Very Good- 4&#189; Stars" value="4.5" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Very Very Good- 4&#190; Stars" value="4.75" checked="checked" />
+<input class="hover-star xxx-star {split:4}" type="radio" name="rate" title="Perfect!- 5 Stars" value="10" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="hover-test" style="margin:0 0 0 20px;">Your Vote</span>
+
+
+</body>
+</html>
