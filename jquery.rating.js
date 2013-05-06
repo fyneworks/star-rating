@@ -236,7 +236,7 @@
 			if(control.readOnly) return;
 			// Reset all stars and highlight them up to this element
 			this.rating('drain');
-			this.prevAll().addBack().filter('.rater-'+ control.serial).addClass('star-rating-hover');
+			this.prevAll().andSelf().filter('.rater-'+ control.serial).addClass('star-rating-hover');
 		},// $.fn.rating.fill
 		
 		drain: function() { // drain all the stars.
@@ -253,7 +253,7 @@
 			this.rating('drain');
 			// Set control value
 			var current = $( control.current );//? control.current.data('rating.input') : null );
-			var starson = current.length ? current.prevAll().addBack().filter('.rater-'+ control.serial) : null;
+			var starson = current.length ? current.prevAll().andSelf().filter('.rater-'+ control.serial) : null;
 			if(starson)	starson.addClass('star-rating-on');
 			// Show/hide 'cancel' button
 			control.cancel[control.readOnly || control.required?'hide':'show']();
