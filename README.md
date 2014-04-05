@@ -42,7 +42,6 @@ Use the `disabled` property to use a control for display purposes only
 <input name="star3" type="radio" class="star" disabled="disabled"/>
 ```
 ####Split-stars with the metadata plugin
-
 Use the <a href="https://github.com/jquery/jquery-metadata">`metadata` plugin</a> to pass advanced settings to the plugin via the class property.
 The example below creates 4 total stars with a selected value of 1.25 (1 and a quarter star).
 The total number of stars is the number of radios divided by the split, in this case 16/4 = 4.
