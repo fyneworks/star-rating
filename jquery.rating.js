@@ -102,7 +102,7 @@
 
 				// Create 'cancel' button
 				rater.append(
-					control.cancel = $('<div class="rating-cancel"><a title="' + control.cancel + '">' + control.cancelValue + '</a></div>')
+					control.cancel = $('<div class="rating-cancel rater-cancel-' + control.serial + '"><a title="' + control.cancel + '">' + control.cancelValue + '</a></div>')
 					.on('mouseover',function(){
 						$(this).rating('drain');
 						$(this).addClass('star-rating-hover');
@@ -293,7 +293,7 @@
 			} else {
 				control.current = this[0].tagName=='INPUT' ?
 					this.data('rating.star') :
-					(this.is('.rater-'+ control.serial) ? this : null);
+					((this.is('.rater-'+ control.serial) || this.is('.rater-cancel-' + control.serial)) ? this : null);
 			}
 			// Update rating control state
 			this.data('rating', control);
