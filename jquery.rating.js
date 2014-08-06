@@ -277,9 +277,9 @@
 			control.current = null;
 			// programmatically (based on user input)
 			if(typeof value!='undefined' || this.length>1){
-			// select by index (0 based)
-			if(typeof value=='number')
-				return $(control.stars[value]).rating('select',undefined,wantCallBack);
+				// select by index (0 based)
+				if(typeof value=='number')
+					return $(control.stars[value]).rating('select',undefined,wantCallBack);
 				// select by literal value (must be passed as a string
 				if(typeof value=='string'){
 					//return
