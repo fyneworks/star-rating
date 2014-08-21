@@ -69,15 +69,15 @@ The number of stars selected is the ordinal value of the radio selected divided 
 ####Options
 The rating method takes several options. They are each detailed here:
 
-| option      | default         | Description
-| ------      | -------         | -----------
-| cancel      | "Cancel Rating" | Advisory title for the 'cancel' link
-| cancelValue | ''              | Value to submit when user click the 'cancel' link
-| split       | 0               | Number of parts to split the star into
-| starWidth   | 16              | Width of star image in case the plugin can't work it out. This can happen if the jQuery.dimensions plugin is not available OR the image is hidden at installation
-| half        | null            | Shortcut for `split: 2`
-| required    | null            | Disables the 'cancel' button so user can only select one of the specified values
-| readOnly    | null            | Disable rating plugin interaction		
-| focus       | null            | Callback function, executed when stars are focused
-| blur        | null            | Callback function, executed when stars are focused
-| callback    | null            | Callback function, executed when a star is clicked
+| option      | type     | default         | Description
+| ------      | ----     | -------         | -----------
+| cancel      | string   | "Cancel Rating" | Advisory title for the 'cancel' link
+| cancelValue | string   | ""              | Value to submit when user click the 'cancel' link
+| split       | integer  | 0               | Number of parts to split the star into
+| starWidth   | integer  | 16              | Width of star image in case the plugin can't work it out. This can happen if the jQuery.dimensions plugin is not available OR the image is hidden at installation
+| half        | boolean  | null            | Shortcut for `split: 2`
+| required    | boolean  | null            | Disables the 'cancel' button so user can only select one of the specified values
+| readOnly    | boolean  | null            | Disable rating plugin interaction		
+| focus       | function | null            | Callback function, executed when stars are focused
+| blur        | function | null            | Callback function, executed when stars are focused
+| callback    | function | null            | Callback function, executed when a star is clicked
