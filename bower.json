@@ -1,0 +1,16 @@
+{
+  "name": "star-rating",
+  "version": "4.11",
+  "main": ["jquery.rating.js","jquery.rating.css"],
+  "keywords": [
+    "jquery",
+    "javascript",
+    "library",
+    "rating",
+    "star",
+    "star-rating"
+  ],
+  "dependencies": {
+    "jquery": ">=1.3"
+  }
+}
