@@ -57,7 +57,7 @@
 
 			// Load control parameters / find context / etc
 			var control, input = $(this);
-			var control_name = (this.name || options.name || 'unnamed-rating').replace(/\[|\]/g, '_').replace(/^\_+|\_+$/g,'');
+			var control_name = (this.name || options.name || 'unnamed-rating' +(options.stars?'-'+$.fn.rating.calls:'') ).replace(/\[|\]/g, '_').replace(/^\_+|\_+$/g,'');
 			var context = $(this.form || document.body);
 
 			// issue #10 - https://github.com/fyneworks/star-rating/issues/10
