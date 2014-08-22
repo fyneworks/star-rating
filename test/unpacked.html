@@ -28,6 +28,56 @@
 
 <div style="padding:20px">
 
+ <h3>Container + 'stars' option</h3>
+ <p>
+  As proposed in <a href="https://github.com/fyneworks/star-rating/issues/10">issue 10 on github repo</a>
+ </p>
+ <table cellspacing="20" id="container-tests">
+  <tr>
+    <td valign="top">
+     CODE
+    </td>
+    <td valign="top">
+     RESULT
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <code><pre>
+      &lt;div class=&quot;star-container&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;$(function(){ $(&#039;#star-container&#039;).rating({stars:5}); })&lt;/script&gt;
+      </pre></code>
+    </td>
+    <td valign="top">
+     <form name="container-test" id="container-test">
+      <div id="star-container"></div>
+      <script>$(function(){ $('#star-container').rating({stars:5,callback:function(value){ alert('You selected '+ value); } }); })</script>
+     </form>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <code><pre>
+      &lt;div class=&quot;star-container-split&quot;&gt;&lt;/div&gt;
+      &lt;script&gt;$(function(){ $(&#039;#star-container&#039;).rating({stars:10,split:2}); })&lt;/script&gt;
+      </pre></code>
+    </td>
+    <td valign="top">
+     <form name="container-split-test" id="container-split-test">
+      <div id="star-container-split"></div>
+      <script>$(function(){ $('#star-container-split').rating({stars:10,split:2,callback:function(value){ alert('You selected '+ value); } }); })</script>
+     </form>
+    </td>
+  </tr>
+ </table>
+ <script>
+$('body').on('click','#container-tests .star', function(){
+  console.log(this);
+})
+ </script>
+
+ <br/><br/><br/>
+
  <h3>Dynamically inserted controls</h3>
  <p>
   This will work even if they have the same name or the name attribute has not been defined.
@@ -45,17 +95,17 @@
   </div>
  </form>
  <script type="text/javascript">
-		function insert_dynamic_control(form){
-			$('div.controls',form).html(
-				['<input type="radio" class="star" name="dynamic-control" value="1"/>',
-					'<input type="radio" class="star" name="dynamic-control" value="2"/>',
-					'<input type="radio" class="star" name="dynamic-control" value="3"/>',
-					'<input type="radio" class="star" name="dynamic-control" value="4"/>',
-					'<input type="radio" class="star" name="dynamic-control" value="5"/>'
-				].join('')
-			);
-			$('input[type=radio]',form).rating();
-		};
+    function insert_dynamic_control(form){
+      $('div.controls',form).html(
+        ['<input type="radio" class="star" name="dynamic-control" value="1"/>',
+          '<input type="radio" class="star" name="dynamic-control" value="2"/>',
+          '<input type="radio" class="star" name="dynamic-control" value="3"/>',
+          '<input type="radio" class="star" name="dynamic-control" value="4"/>',
+          '<input type="radio" class="star" name="dynamic-control" value="5"/>'
+        ].join('')
+      );
+      $('input[type=radio]',form).rating();
+    };
  </script>
  
  <br/><br/><br/>

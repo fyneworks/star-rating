@@ -57,13 +57,37 @@
 
 			// Load control parameters / find context / etc
 			var control, input = $(this);
-			var eid = (this.name || 'unnamed-rating').replace(/\[|\]/g, '_').replace(/^\_+|\_+$/g,'');
+			var control_name = (this.name || options.name || 'unnamed-rating').replace(/\[|\]/g, '_').replace(/^\_+|\_+$/g,'');
 			var context = $(this.form || document.body);
+
+			// issue #10 - https://github.com/fyneworks/star-rating/issues/10
+			if(!input.is('input')){
+				if(options.stars){
+					
+					// insert newly created form elements
+					input.html(Array(options.stars+1).join(
+						'<input type="radio" name="'+ control_name +'"/>'
+					));
+
+					return input.find('input').each(function(i){
+						// set element values.
+						// accepts an array in options.values
+						// or defaults to numbers from 1 to options.stars
+						$(this).val( options.values ? options.values[i] : i+1 )
+
+					})
+					.rating(options);
+				}
+				else{
+					throw "Invalid star rating plugin call";
+					return;
+				};
+			};
 
 			// FIX: http://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=23
 			var raters = context.data('rating');
 			if(!raters || raters.call!=$.fn.rating.calls) raters = { count:0, call:$.fn.rating.calls };
-			var rater = raters[eid] || context.data('rating'+eid);
+			var rater = raters[control_name] || context.data('rating'+control_name);
 
 			// if rater is available, verify that the control still exists
 			if(rater) control = rater.data('rating');
@@ -190,14 +214,14 @@
 			// store control information in form (or body when form not available)
 			control.stars[control.stars.length] = star[0];
 			control.inputs[control.inputs.length] = input[0];
-			control.rater = raters[eid] = rater;
+			control.rater = raters[control_name] = rater;
 			control.context = context;
 
 			input.data('rating', control);
 			rater.data('rating', control);
 			star.data('rating', control);
 			context.data('rating', raters);
-			context.data('rating'+eid, rater); // required for ajax forms
+			context.data('rating'+control_name, rater); // required for ajax forms
 		}); // each element
 
 		// Initialize ratings (first draw)
