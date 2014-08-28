@@ -59,7 +59,7 @@
     <td valign="top">
      <code><pre>
       &lt;div class=&quot;star-container-split&quot;&gt;&lt;/div&gt;
-      &lt;script&gt;$(function(){ $(&#039;#star-container&#039;).rating({stars:10,split:2}); })&lt;/script&gt;
+      &lt;script&gt;$(function(){ $(&#039;#star-container-split&#039;).rating({stars:10,split:2}); })&lt;/script&gt;
       </pre></code>
     </td>
     <td valign="top">
@@ -67,6 +67,54 @@
       <div id="star-container-split"></div>
       <script>$(function(){ $('#star-container-split').rating({stars:10,split:2,callback:function(value){ alert('You selected '+ value); } }); })</script>
      </form>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <code><pre>
+      $('&lt;div/&gt;').rating({
+        stars:5,
+        callback: function(v){
+          alert(v)}
+        }
+      ).appendTo('#widgets-on-the-fly')
+      </pre></code>
+    </td>
+    <td valign="top">
+      <button onclick="
+$('<div/>').rating({
+        stars:5,
+        callback: function(v){
+          alert(v)}
+        }
+      ).appendTo('#widgets-on-the-fly')
+      ">Add a widget below</button>
+     <div id="widgets-on-the-fly"></div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <code><pre>
+      $('&lt;div/&gt;').rating({
+        stars:5,
+        values: ['A','B','C','D','E'],
+        callback: function(v){
+          alert(v)}
+        }
+      ).appendTo('#widgets-on-the-fly')
+      </pre></code>
+    </td>
+    <td valign="top">
+      <button onclick="
+$('<div/>').rating({
+        stars:5,
+        values: ['A','B','C','D','E'],
+        callback: function(v){
+          alert(v)}
+        }
+      ).appendTo('#widgets-on-the-fly-aplha')
+      ">Add a widget with values A, B, C, D, E</button>
+     <div id="widgets-on-the-fly-aplha"></div>
     </td>
   </tr>
  </table>
