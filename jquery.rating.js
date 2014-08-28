@@ -153,6 +153,11 @@
 			if(this.id) star.attr('id', this.id);
 			if(this.className) star.addClass(this.className);
 
+			// Google Code Suggestion 144 - https://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=144
+			for (datum in $(this).data()) {
+				star.data(datum, $(this).data(datum));
+			};
+
 			// Half-stars?
 			if(control.half) control.split = 2;
 
