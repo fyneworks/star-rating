@@ -1,6 +1,6 @@
 {
   "name": "jquery-star-rating",
-  "version": "4.11",
+  "version": "4.11.0",
   "main": ["jquery.rating.js","jquery.rating.css","delete.gif","star.gif"],
   "ignore": [
     "documentation",

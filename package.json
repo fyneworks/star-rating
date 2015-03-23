@@ -1,0 +1,27 @@
+{
+  "name": "star-rating",
+  "version": "4.11.0",
+  "description": "jQuery Star Rating Plugin",
+  "main": "jquery.rating.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grnut test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fyneworks/star-rating.git"
+  },
+  "keywords": [
+    "jquery",
+    "star",
+    "rating"
+  ],
+  "author": "Fyneworks.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fyneworks/star-rating/issues"
+  },
+  "homepage": "https://github.com/fyneworks/star-rating"
+}
