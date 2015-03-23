@@ -8,7 +8,7 @@ The Star Rating Plugin is a plugin for the jQuery Javascript library that create
 ##Installation
 * Current version: 4.11
 * Release date: 2013-03-14
-* Download: <a href="http://jquery-star-rating-plugin.googlecode.com/svn/trunk/star-rating.zip"><strong>star-rating.zip</strong></a>
+* Download: <a href="https://github.com/fyneworks/star-rating/archive/master.zip"><strong>star-rating.zip</strong></a>
 
 ---
  

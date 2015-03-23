@@ -1,7 +1,21 @@
 {
-  "name": "star-rating",
+  "name": "jquery-star-rating",
   "version": "4.11",
-  "main": ["jquery.rating.js","jquery.rating.css"],
+  "main": ["jquery.rating.js","jquery.rating.css","delete.gif","star.gif"],
+  "ignore": [
+    "documentation",
+    "documentation.html",
+    "documentation.css",
+    "documentation.js",
+    "v5",
+    "test",
+    "ajax.html",
+    "star-rating.zip",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [
     "jquery",
     "javascript",
