@@ -112,7 +112,7 @@
 				control.serial = raters.count++;
 
 				// create rating element
-				rater = $('<span class="star-rating-control"/>');
+				rater = $('<span class="star-rating-control" role="presentation" />');
 				input.before(rater);
 
 				// Mark element for initialization (once all stars are ready)
@@ -205,7 +205,7 @@
 			}
 
 			// hide input element
-			input.hide();
+			input.css({"position": "absolute", "left": "-9999em"});
 
 			// backward compatibility, form element to plugin
 			input.on('change.rating',function(event){
