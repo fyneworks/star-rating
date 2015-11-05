@@ -112,7 +112,7 @@
 				control.serial = raters.count++;
 
 				// create rating element
-				rater = $('<span class="star-rating-control" role="presentation" />');
+				rater = $('<span class="star-rating-control" aria-hidden="true" />');
 				input.before(rater);
 
 				// Mark element for initialization (once all stars are ready)
