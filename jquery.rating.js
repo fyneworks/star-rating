@@ -1,6 +1,6 @@
 /*
  ### jQuery Star Rating Plugin v4.11 - 2013-03-14 ###
- * Home: http://www.fyneworks.com/jquery/star-rating/
+ * Home: https://star-rating.fyneworks.com/
  * Code: http://code.google.com/p/jquery-star-rating-plugin/
  *
 	* Licensed under http://en.wikipedia.org/wiki/MIT_License

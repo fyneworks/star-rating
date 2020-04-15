@@ -1,4 +1,4 @@
-#[jQuery Star Rating](http://www.fyneworks.com/jquery/star-rating/)
+#[jQuery Star Rating](https://star-rating.fyneworks.com/)
 
 ##Overview
 The Star Rating Plugin is a plugin for the jQuery Javascript library that creates a non-obstrusive star rating control based on a set of radio input boxes.

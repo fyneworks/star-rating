@@ -1,0 +1,79 @@
+.colored {
+	/* resets */ margin: 0; padding: 0;
+	background-color: #E8E8E8;
+	overflow: hidden;
+}
+.colored PRE {
+	margin: 0;
+	padding: 0 0 0 45px;
+	font: 12px "Consolas","Courier New",Courier,mono;
+	overflow: auto;
+	line-height: 100%;
+
+/*	One of lines below fixes hidden horizontal bar in FF with single long line of code.
+	NOTE: since v1.4 this fix is added to JS file instead.
+	padding-bottom: 3px;
+	line-height: 1.5em;
+*/
+}
+.colored PRE ol {
+	/* resets */ margin: 0; padding: 0;
+	color: #222222;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: decimal-leading-zero;
+}	
+.colored PRE ol li {
+	margin: 0;
+	padding: 0 0 0 10px;
+	border-left: 1px solid #CCCCCC;
+	background-color: #F8F8F8;
+}
+.colored .bar {
+	/* resets */ margin: 0; padding: 0;
+	padding-left: 45px;
+	height: 19px;
+	background: #EEEEEE url(jquery.chili-toolbar-bg.png) repeat-x 0 100%;
+	border-bottom: 1px solid #CCCCCC;
+}
+.colored .tools {
+	padding: 0 8px 0 0;
+	font: normal 10px Verdana,Helvetica,Geneva,Arial,sans-serif;
+}
+.colored .tools a {
+	display: block;
+	float: left;
+	padding-right: 4px;
+	color: #B2B2B2;
+	text-decoration: none;
+	outline: 0;
+	border: 0 !important;
+}
+.colored .tools a span {
+	display: block;
+	height: 15px;
+	padding: 4px 4px 0 8px;
+	text-align: center;
+	cursor: pointer;
+}
+.colored .tools a:hover {
+	background: #EEEEEE url(jquery.chili-toolbar-bg.png) repeat-x 100% 0;
+}
+.colored .tools a:hover span {
+	color: black;
+	background: #EEEEEE url(jquery.chili-toolbar-bg.png) repeat-x 0 0;
+}
+/* Hide useless elements in print layouts... */
+@media print {
+    .colored {
+		margin: 0; padding: 0;
+		border: 0 none;
+    }
+	.colored PRE {
+		font-size: 14px;
+		overflow: hidden;
+	}
+	.colored PRE ol li {
+		border-bottom: 0 none;
+	}
+}
