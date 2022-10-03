@@ -3,14 +3,10 @@
 ## Overview
 The Star Rating Plugin is a plugin for the jQuery Javascript library that creates a non-obstrusive star rating control based on a set of radio input boxes.
 
----
-
 ## Installation
 * Current version: 4.11
 * Release date: 2013-03-14
 * Download: <a href="https://github.com/fyneworks/star-rating/archive/master.zip"><strong>star-rating.zip</strong></a>
-
----
 
 ## Basic Usage
 
